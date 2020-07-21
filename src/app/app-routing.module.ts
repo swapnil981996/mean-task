@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {UploadImageComponent} from './upload-image/upload-image.component'
 import {LoginComponent} from './login/login.component'
+import {AuthGuard} from './auth/auth.guard'
 
 const routes: Routes = [
   {path:'',redirectTo: 'login',pathMatch: 'full'},
   {path:'login',component: LoginComponent},
-  {path:'upload-image',component: UploadImageComponent}
+  {path:'upload-image',component: UploadImageComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({
