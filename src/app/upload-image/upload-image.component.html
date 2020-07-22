@@ -1,7 +1,7 @@
     <!-- Select File -->
-    <input type="file" (change)="showPreview($event)" />
-  
-    <!-- Image Preview -->
+  <div class="upload_image_main_div">  
     <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
-      <img [src]="imageURL" >
+      <img [src]="imageURL" class="img_block">
     </div>
+    <input type="file" (change)="showPreview($event)" />
+  </div>   

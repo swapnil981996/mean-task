@@ -10,13 +10,16 @@ import { LoginComponent } from './login/login.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth.guard';
+import { DisplayChartComponent } from './display-chart/display-chart.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UploadImageComponent,
     LoginComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    DisplayChartComponent
   ],
   imports: [
     BrowserModule,

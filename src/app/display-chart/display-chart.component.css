@@ -1,0 +1,13 @@
+canvas{
+    box-shadow: 0px 0px 6px #0000007d;
+    margin: auto;
+    margin-top: 21px;
+    border-radius: 9px;
+    background-color: white;
+}
+.chart_maindiv{
+    background-color: #b1afaf40;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px;
+}

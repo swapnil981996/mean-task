@@ -44,16 +44,17 @@ body{
     height: 40px;
 }
 
-.login-container input[type="submit"]{
+.login-container input[type="button"]{
     width: 100%;
     border: none;
     outline: none;
     height: 40px;
-    background-image: linear-gradient(to right,#F26FC9, #8772EF);
+    background-color: #01a0f9;
     color: #ffff;
+    border-radius: 20px;
     
 }
-.login-container input[type="submit"]:hover{
+.login-container input[type="button"]:hover{
     cursor: pointer;
     box-shadow: 1px 1px 10px #696969;
 }

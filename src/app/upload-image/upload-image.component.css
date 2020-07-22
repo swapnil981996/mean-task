@@ -1,0 +1,11 @@
+.upload_image_main_div{
+    text-align: center;
+}
+.imagePreview{
+    height: 350px;
+    margin-bottom: 20px;
+}
+.img_block{
+    height: 350px;
+    box-shadow: 0px 0px 7px #09090940;
+}
