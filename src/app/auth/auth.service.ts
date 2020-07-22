@@ -7,9 +7,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable()
 export class AuthService {
   private loggedIn = new BehaviorSubject<boolean>(false); // {1}
+  private errmsg =new BehaviorSubject<boolean>(false);
 
   get isLoggedIn() {
     return this.loggedIn.asObservable(); // {2}
+  }
+
+  get iserrmsg() {
+    return this.errmsg.asObservable(); // {2}
   }
 
   constructor(
@@ -25,7 +30,11 @@ export class AuthService {
             {
             //console.log('successful');
                 this.loggedIn.next(true);
+                this.errmsg.next(false)
                 this.router.navigate(['/upload-image']);
+            }
+            else{
+              this.errmsg.next(true)
             }
         })
     }

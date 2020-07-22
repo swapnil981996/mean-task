@@ -71,3 +71,9 @@ a:hover{
     color: #d3d3d3;
     
 }
+
+.errmsg_div{
+    margin-bottom: 0px;
+    margin-top: 20px;
+    color: red;
+}

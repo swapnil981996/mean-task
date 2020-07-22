@@ -10,5 +10,8 @@
             <input type="password" placeholder="Enter your password here" formControlName="password">
         </div>
         <input type="button" name="login"  (click)="onSubmit()" value="LOGIN">
+        <div class="errmsg_div" *ngIf="iserrmsg$ | async" >
+            please check your email and password
+        </div>    
     </form>
 </div>

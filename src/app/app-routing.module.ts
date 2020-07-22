@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'',redirectTo: 'login',pathMatch: 'full'},
   {path:'login',component: LoginComponent},
   {path:'upload-image',component: UploadImageComponent, canActivate:[AuthGuard]},
-  {path:'display-chart',component: DisplayChartComponent}
+  {path:'display-chart',component: DisplayChartComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { FormControl, Validators, NgForm, FormGroup, FormBuilder, FormGroupDirective, FormArray } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from '../auth/auth.service';
@@ -11,6 +12,7 @@ import { AuthService } from '../auth/auth.service';
 })
 export class LoginComponent implements OnInit{ 
   loginForm:FormGroup;
+  iserrmsg$: Observable<boolean>; 
   constructor(
     private router: Router,
     private formbuilder:FormBuilder,
@@ -23,6 +25,7 @@ export class LoginComponent implements OnInit{
         email:['',[Validators.required,Validators.email]],
         password:['',[Validators.required]]
       })
+      this.iserrmsg$ = this.authService.iserrmsg;
     }
 
   onSubmit() 
