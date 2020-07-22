@@ -86,10 +86,6 @@ export class DisplayChartComponent implements OnInit {
           datasets: this.dataset
       },
       options: {
-        title: {
-          display: true,
-          text: 'Custom Chart Title'
-      },
         legend:{
           display: true,
       },
@@ -129,7 +125,9 @@ export class DisplayChartComponent implements OnInit {
   updateConfigAsNewObject() {
     if(new Date((<HTMLInputElement>document.getElementById('lastdate')).value) > new Date(this.maxdate) || new Date((<HTMLInputElement>document.getElementById('startdate')).value) < new Date(this.mindate))
     {
-        alert('select Date between '+this.mindate+" & "+this.maxdate)
+      let startDate=new Date(this.mindate).getDate()+'-'+new Date(this.mindate).toString().split(' ')[1]+'-'+new Date(this.mindate).getFullYear()
+      let lastDate=new Date(this.maxdate).getDate()+'-'+new Date(this.maxdate).toString().split(' ')[1]+'-'+new Date(this.maxdate).getFullYear()
+        alert('select Date between '+ startDate +" & "+ lastDate)
     }
     else{
         this.max=moment((<HTMLInputElement>document.getElementById('lastdate')).value).format();
@@ -160,8 +158,6 @@ export class DisplayChartComponent implements OnInit {
             }
           }
         });
-        myChart.options.title.display=true
-        myChart.options.title.text='hiii'
         let date1=new Date(this.min)
         let date2=new Date(this.max)
         var Difference_In_Time = date2.getTime() - date1.getTime(); 

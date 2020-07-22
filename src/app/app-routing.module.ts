@@ -8,8 +8,8 @@ import {DisplayChartComponent} from './display-chart/display-chart.component'
 const routes: Routes = [
   {path:'',redirectTo: 'login',pathMatch: 'full'},
   {path:'login',component: LoginComponent},
-  {path:'upload-image',component: UploadImageComponent, },
-  {path:'display-chart',component: DisplayChartComponent,}
+  {path:'upload-image',component: UploadImageComponent, canActivate:[AuthGuard]},
+  {path:'display-chart',component: DisplayChartComponent}
 ];
 
 @NgModule({

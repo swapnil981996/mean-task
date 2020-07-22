@@ -1,7 +1,9 @@
 <div *ngIf="isLoggedIn$ | async">
     <div class="app_header">
-        <a class="app_header_link" routerLink='/upload-image'>upload image</a>
-        <a class='app_header_link' routerLink='/display-chart'>display chart</a>
+        <div class="app_header_link_main_div">
+            <a class="app_header_link" routerLink='/upload-image'>upload image</a>
+            <a class='app_header_link' routerLink='/display-chart'>display chart</a>
+        </div>
         <button class="app_header_logout" (click)="onLogout()" *ngIf="isLoggedIn$ | async">logout</button>
     </div>    
 </div>   
